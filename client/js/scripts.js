@@ -5,7 +5,6 @@ var zodiacs = [
 	description: "Aries is ruled by Mars, the fiery red planet of energy and drive. In mythology, Mars was the god of war and aggression. Highly impatient and competitive, many Aries have the fighting spirit of your mythological ruler. You love to be a hero–or to be swept away by one. As the zodiac’s first sign, you were born to be number one. You’re a solo star who steals the spotlight and inspires everyone with your confidence. Yeah, you can be impatient, even a little bossy, especially when you don’t get your way. As the “baby” of the zodiac, you need lots of attention, and can throw quite the tantrum when you don’t get it. Fortunately, you rarely have a problem turning heads. Your friends love to follow as you lead them on the latest adventure. Make sure to let other people be the boss every now and then, too, or you could alienate potential allies. Focus your competitive streak into a diva-worthy goal, delegate to your troops, and you’ll rise to the top!"
 },
 {
-
 	name: "Taurus",
 	month: "April 20 to May 20",
 	description: "Sensual Taurus is ruled by Venus, the planet of love and beauty. Your sign loves great food, romance and beautiful things. Venus kicks your five senses into high gear, so you are are happiest when surrounded by the best of everything. Satin sheets, gourmet dinners, a glass of red wine, and boom…you’re relaxing into one of your famous, 14-hour naps. Not that you don’t work hard, too. Like a bull, Taurus operates at two speeds: either totally relaxed, or charging headfirst towards a target. You prefer to keep the peace, but when you’re pushed past your limit, watch out! Underneath it all, you just want to be comfortable, and surrounded by life’s finest offerings. Taurus knows what s/he likes, and that’s that. You stick with your opinions, and you don’t change unless there’s a really good reason. You can be stubborn…but on the upside, you’re also loyal and dependable. Just be careful not to get stuck in a safety zone or your life could become stagnant. Take a chance and try something new. Sometimes, change and risk can bring the progress and reward you’re wishing for."
@@ -13,8 +12,7 @@ var zodiacs = [
 {
 	name: "Gemini",
 	month: "May 21-June 20",
-	description: description: "The Gemini mind (and mouth!) is a busy machine, always moving at warp speed. That’s because your sign is ruled by Mercury, the planet of communication. Mercury also rules technology and the mind, making Gemini one of the most curious and cutting-edge signs of the zodiac. If two is double the fun, then as the sign of the twins, you know it’s true! There are at least two personalities inside of you at all times. Adventurous Geminis change faster than the weather, and constantly flip between moods and interests. One day, you’re into frilly, girl stuff. The next day, you’re over that and skydiving out of an airplane. If possible, try to stick with a couple key passions for the long haul, and get really good at them. You love to chatter and you have a million great ideas. Keep your fast-moving mind and hands busy with email, instant messages, mobile gadgets, and great conversations. Watch a temptation to gossip. Keep a notebook handy to jot down your thoughts at all times."
-
+	description: "The Gemini mind (and mouth!) is a busy machine, always moving at warp speed. That’s because your sign is ruled by Mercury, the planet of communication. Mercury also rules technology and the mind, making Gemini one of the most curious and cutting-edge signs of the zodiac. If two is double the fun, then as the sign of the twins, you know it’s true! There are at least two personalities inside of you at all times. Adventurous Geminis change faster than the weather, and constantly flip between moods and interests. One day, you’re into frilly, girl stuff. The next day, you’re over that and skydiving out of an airplane. If possible, try to stick with a couple key passions for the long haul, and get really good at them. You love to chatter and you have a million great ideas. Keep your fast-moving mind and hands busy with email, instant messages, mobile gadgets, and great conversations. Watch a temptation to gossip. Keep a notebook handy to jot down your thoughts at all times."
 },
 {
 	name: "Cancer",
@@ -61,4 +59,13 @@ var zodiacs = [
 	month: "February 19 to March 20",
 	description: "Pisces is symbolized by two fish swimming in opposite directions. A part of you is always trying to “swim away” or escape reality. The other part is so intuitive that you get swept up in everything going on. Your imagination is the perfect hideout when you want to escape, since Pisces is so creative. You love dancing (Pisces rules the feet), movies, poetry, and music. Your moods are mysterious and your dreams are intense. Every Pisces should have a journal by your bed, since some your best ideas will come in your sleep. Although you can feel helpless, you’re much stronger than you think. The best way for Pisces to experience your own strength is to help people in need. You have great compassion and incredible healing powers. Because it’s easy for people to make you feel guilty, Pisces should watch out for friends who use you, or make you doubt yourself. Surround yourself with good-hearted friends who have their acts together. Many people born under your sign have a “tortured soul” quality. Finding a tranquil spiritual outlet, or spending time alone, can help you get re-centered in your own power."
 }
-	]
+]
+
+function getData(){
+	var userSearch = document.getElementById('user-search').value.toLowerCase();
+	for(var i = 0; i < zodiacs.length; i++){
+		if(userSearch === zodiacs[i].name.toLowerCase()){
+			document.getElementById('text-result').innerHTML = zodiacs[i].description;
+		}
+	}
+}
